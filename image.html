@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result">1</div>
+    <button onclick="createHeading()">Click me to add H1</button>
+    <button onclick="createImage()">Create Image</button>
+
+    <script>
+
+        function createHeading(){
+            var element=document.createElement('h1');
+            var text=document.createTextNode('Hello from Felix-IT')
+            element.appendChild(text)
+            document.querySelector('#result').appendChild(element)
+            
+            //console.log(text)
+            //console.log("Function is working")
+        }
+
+        
+        function createImage(){
+            var img=document.createElement('img');
+            //console.log(img)
+            img.src="./deskimage.jpg"
+
+            var height=300
+            var width=300
+            img.height=height
+            img.width=width
+            console.log(img)
+            document.querySelector('#result').appendChild(img)
+        }
+            </script>
+</body>
+</html>
